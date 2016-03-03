@@ -1,5 +1,44 @@
-<form action="login" method="POST">
-    <input type="text" name="username"></input>
-    <input type="password" name="password"></input>
-    <input type="submit"></input>
-</form>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="bootell">
+    <link rel="icon" href="favicon.ico">
+
+    <title>bosign - Automatically Sign Your Account</title>
+
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/sign.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+        <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="site-wrapper">
+        <div class="login-container">
+            <form class="form-signin" action="" method="POST">
+                <h2 class="form-signin-heading">Sign In</h2>
+                <label for="inputEmail" class="sr-only">Username</label>
+                <input type="text" id="inputUsername" class="form-control" placeholder="Username" name="username" required autofocus>
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-default btn-block" type="submit">Sign in</button>
+            </form>
+            <div class="login-footer">
+                <p class="text-muted">&copy; <a href="#">AutoSign</a> - <a href="http://bootell.net" target="_blank">bootell</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

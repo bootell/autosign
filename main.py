@@ -25,7 +25,7 @@ def init_db():
 @app.before_request
 def before_request():
     #check login
-    if  'username' in session or request.path == '/login':
+    if  'username' in session or request.path == '/login' or request.path == '/static/sign.css':
         pass
     else:
         return redirect(url_for('login'))
@@ -56,7 +56,7 @@ def logout():
 #dashboard page
 @app.route('/dashboard')
 def dashboard():
-    return 'Hello %s' % session['username']
+    return render_template('index.html')
 
 app.secret_key = 'autosign-by-bootell'
 if __name__ == '__main__':
